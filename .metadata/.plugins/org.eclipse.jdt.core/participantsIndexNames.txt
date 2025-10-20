@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+D:\MSA-JAVA\Spring\SpringLegacy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2321012267.index
+\WebLegacy\src\main\java
+D:\MSA-JAVA\Spring\SpringRegacy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3883225781.index
+\WebLeagcy\src\main\java
