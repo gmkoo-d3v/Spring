@@ -164,3 +164,13 @@ public board m(){
 public board m(){
   return new board();
 }
+
+어노테이션	설명
+@SpringBootApplication	스프링 부트 애플리케이션의 주요 구성 요소로, 자동 구성, 구성 요소 검색 및 프로퍼티 설정을 제공합니다.
+@Configuration	스프링 빈 설정을 위한 클래스임을 나타냅니다. 이 어노테이션이 지정된 클래스는 하나 이상의 @Bean 메서드를 포함할 수 있습니다.
+@Bean	스프링 컨테이너에 의해 관리되는 빈 객체를 정의하는 메서드임을 나타냅니다. @Configuration 어노테이션이 지정된 클래스 내에서 사용됩니다.
+@Component	스프링 관리 빈으로 등록되는 클래스임을 나타냅니다. 일반적으로 의존성 주입(Dependency Injection)을 위해 사용됩니다.
+@Controller	스프링 MVC 애플리케이션에서 컨트롤러로 사용되는 클래스임을 나타냅니다.
+@Service	스프링 애플리케이션에서 서비스 클래스임을 나타냅니다.
+@Repository	스프링 애플리케이션에서 리포지토리 클래스임을 나타냅니다.
+@ComponentScan	컴포넌트를 검색하여 스프링 빈으로 등록하는 데 사용됩니다. 지정된 패키지에서 @Component 어노테이션이 지정된 클래스를 검색합니다.

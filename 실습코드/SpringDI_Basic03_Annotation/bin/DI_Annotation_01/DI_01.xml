@@ -75,7 +75,6 @@
 	 	3. 같은 타입의 빈객체가 여러개 있어도 id 값이 setter 함수 parameter  명과 동일하면 자동 주입 성공
 	 -->
 	<context:annotation-config />
-	org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
 	<bean id="recorder"  class="DI_Annotation_01.Recorder"></bean>
 	<bean id="monitorViewer"  class="DI_Annotation_01.MonitorViewer"></bean>
     <bean id="a"  class="DI_Annotation_01.Recorder"></bean>

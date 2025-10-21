@@ -3,25 +3,25 @@ spring 통해서 (객체의 생성 과 조립(injection))
 ​1. xml 설정을 통해서 (bean 생성 , injection)
 2. xml 문서 없이도 지금과 같은 동일 작업 가능 
    >> 자바코드 이용해서 설정 작업(JAVA 파일 + Annotation)
-   >> xml 파일 (x)
+   >> xml 파일 (x 없어도 된다는 예기 부트에서는 아에 없애버림)
 
 ​
 3. 기존 xml :
 new GenericXmlApplicationContext("classpath:DI_Annotation_04/DI_Annotation_04.xml");
-
+    스프링 전용 메모리 공간 생성
 ​
   현재 java :
 new AnnotationConfigApplicationContext(ConfigContext.class);   
 =>ConfigContext.java >> xml 대체  >>bean 만들고 injection 방법 >> Annotation
-
+    스프링 전용 메모리 공간 만들고/ 요 자바파일의 정보를 제공 (configcontext.class) /
 ​
 
 사용 어노테이션은
 1.  @Configuration :해당 클래스가 [스프링의 설정]으로 사용됨을 지정 (xml을 대체 할 거야)
-    ex)
+    ex) 너는 설정파일이며 객체를 만들고 필요한것을 주입한다.
     @Configuration
     public class configcontext {}
-
+		함수안에서 new를 쓰긴한다. ConfigContext.java 참조 14 20줄
 ​
 
 2.  @Bean
@@ -98,7 +98,7 @@ class Configcontext{
 
          @bean
          public MemberRegisterService memberRegSvc(){
-           return new MemberRegisterService(memberdao()); //함수를 통한 주입
+           return new MemberRegisterService(memberdao()); //함수를(파라메터로해서) 통한 주입
          } 
 
          @bean
