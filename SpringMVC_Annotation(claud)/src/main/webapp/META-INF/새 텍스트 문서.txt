@@ -1,0 +1,53 @@
+1. Annotation변경
+
+   @Controller
+   @RequestMapping
+
+   하나의 컨트롤러가 여러개의 요청 처리 하도록 변환
+   >> ncontroller > CustomerController >> 게시판 목록보기 , 게시판 상세보기 함수 매핑을 통해서 완성
+
+@Controller
+class Board{
+	
+	@RequestMapping("/list.do")
+	void listBoard(){
+	}
+	
+	@RequestMapping("/insert.do")
+	void insertBoard(){
+	}
+
+}
+
+1. ncontroller 패키지 생성
+1.1 CustomerController 생성
+
+   
+[옵션]
+spring MVC의 Controller 클래스 선언을 단순화시켜준다. 
+스프링 컨트롤러, 서블릿을 상속할 필요가 없으며, @Controller로 등록된 클래스 파일에 대한 bean을 자동으로 생성해준다.
+ Controller로 사용하고자 하는 클래스에  @Controller 지정해 주면 component-scan으로 자동 등록된다.
+ <context:component-scan base-package="com.controller"/> 
+ @Controller 가 붙어있는 클래스를 자동 bean 등록   
+   
+--------------------------------------------------------------   
+*글쓰기 구현 (파일 업로드)
+* Notice.java (VO, DTO) .....
+fileSrc 업로드한 파일명
+
+insert 나 update > 페이지 다른 페이지로 redirect 하지 않으면 (F5 계속 write)
+이동 :  location.href or redirect
+javascript  : location.href="notice.do"
+servlet/jsp : response.sendRedirect(notice.do) 
+
+
+spring > return "redirect:notice.do"
+
+customer/upload 
+---------------------------------------------------------------------------   
+   
+   
+   
+   
+   
+   

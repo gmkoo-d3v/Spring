@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- Annotation 기반 설정 활성화 -->
+<context:annotation-config />
+
+<!-- Component Scan 설정 - @Controller가 붙은 클래스를 자동으로 Bean으로 등록 -->
+<context:component-scan base-package="ncontroller" />
+
+<!-- 모든 컨트롤러가 공통 사용 DAO 빈 객체 참조 -->
+<bean id="noticeDao" class="dao.NoticeDao"></bean>
+
+<!-- 파일 업로드 설정 -->
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <!-- 최대 업로드 크기: 10MB -->
+    <property name="maxUploadSize" value="10485760" />
+    <!-- 메모리에서 처리할 최대 크기: 1MB -->
+    <property name="maxInMemorySize" value="1048576" />
+    <!-- 인코딩 -->
+    <property name="defaultEncoding" value="UTF-8" />
+</bean>
+
+</beans>
