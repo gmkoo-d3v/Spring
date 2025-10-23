@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!-- NULL 값 처리를 위한 JdbcType 설정 -->
+        <setting name="jdbcTypeForNull" value="NULL" />
+    </settings>
+</configuration>
